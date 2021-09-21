@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    transition: all 0.4s linear;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+:root{
+    --main-color: #443;
+    --black: #000;
+    --white: #fff;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border: 0.2rem solid var(--main-color);
+    --border-hover: 0.2rem dashed var(--main-color);
+    --border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+    --border-radius-hover: 4% 95% 6% 95%/95% 4% 92% 5%;
+}
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.1rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    background: var(--white);
+}
+.header .logo{
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--main-color);
+}
+.header .logo i{
+    padding-left: 0.5rem;
+}
+.header .navbar ul{
+    display: flex;
+    list-style: none;
+}
+.header .navbar ul li{
+    margin-left: 3rem;
+}
+.header .navbar a{
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 1.3rem;
+}
+.btn{
+    display: inline-block;
+    padding: .9rem 1.5rem;
+    background: none;
+    border-radius: var(--border-radius);
+    color: var(--main-color);
+    font-size: 1rem;
+    cursor: pointer;
+    border: var(--border);
+}
+.btn:hover{
+    border-radius: var(--border-radius-hover);
+    border: var(--border-hover);
+}
+#menu-btn{
+    font-size: 2rem;
+    color: var(--main-color);
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queires */
+@media (max-width:991px) {
+    html{
+        font-size: 80%;
+    }
+    .header{
+        padding: 2rem;
+    }
+    
+}
+@media (max-width:768px) {
+    html{
+        font-size: 60%;
+    }
+    .header{
+        padding: 2rem;
+    }
+  
+}
+@media (max-width:450px) {
+    html{
+        font-size: 60%;
+    }
+    #menu-btn{
+        display: initial;
+    }
+    
+    .header{
+        padding: 1rem;
+    }
+    .header .navbar{
+        display: none;
+    }
+}
