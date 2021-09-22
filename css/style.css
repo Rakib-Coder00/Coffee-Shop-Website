@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     text-transform: capitalize;
+    text-decoration: none;
     outline: none;
     border: none;
     transition: all 0.4s linear;
@@ -25,7 +26,7 @@ html{
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
-
+/* style header section  */
 .header{
     position: fixed;
     top: 0;
@@ -52,14 +53,14 @@ html{
     display: flex;
     list-style: none;
 }
-.header .navbar ul li{
-    margin-left: 3rem;
-}
+
 .header .navbar a{
+    margin-left: 3rem;
     text-decoration: none;
     color: var(--main-color);
     font-size: 1.3rem;
 }
+
 .btn{
     display: inline-block;
     padding: .9rem 1.5rem;
@@ -81,10 +82,69 @@ html{
     display: none;
 }
 
+/* Style Home Section  */
+section{
+    padding: 2rem 9%;
+}
+
+.home{
+    min-height: 100vh;
+    padding-top: 13rem;
+    background: url(../images/home-bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.home .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.home .row .content{
+    flex: 1 1 42rem;
+}
+.home .row .image{
+    flex: 1 1 42rem;
+    padding-top: 10rem;
+    text-align: center;
+}
+.home .row .image img{
+    height: 25rem;
+    animation: float 4s linear infinite;
+}
+@keyframes float {
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(-7rem);
+    }
+}
+
+.home .row .content h3{
+    font-size: 5rem;
+    color: var(--main-color);
+}
 
 
 
+.image-slider{
+    text-align: center;
+    padding: 3rem 0;
+}
+.image-slider img{
+    height: 7rem;
+    cursor: pointer;
+    margin: 0 0.1rem;
+    margin-top: 5rem;
+}
 
+.image-slider img:hover{
+    transform: translateY(-2rem);
+}
+
+/* style about section  */
 
 
 
@@ -97,7 +157,7 @@ html{
 /* media queires */
 @media (max-width:991px) {
     html{
-        font-size: 80%;
+        font-size: 70%;
     }
     .header{
         padding: 2rem;
@@ -105,26 +165,51 @@ html{
     
 }
 @media (max-width:768px) {
-    html{
-        font-size: 60%;
+    #menu-btn{
+        display: initial;
     }
-    .header{
+    section{
         padding: 2rem;
     }
-  
+    .header .navbar{
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .header .navbar a{
+        display: block;
+        padding: 1.5rem 2rem;
+        margin: 1rem;
+        font-size: 1.8rem;   
+        background: #eee;
+        border-radius: 10px;
+    }
+    .header .navbar a:hover{
+        background: #d88b44;
+    }  
+    .home{
+        text-align: center;
+    }
+    .home .row .content h3{
+        font-size: 3.5rem;
+    }
 }
 @media (max-width:450px) {
     html{
         font-size: 60%;
     }
-    #menu-btn{
-        display: initial;
-    }
     
     .header{
         padding: 1rem;
     }
-    .header .navbar{
-        display: none;
+    .home .row .image img{
+        height: auto;
+        width: 100%;
     }
 }
