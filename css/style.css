@@ -335,7 +335,33 @@ section{
 
 
 /* style book section  */
-
+.book{
+    background: url(../images/book-bg.jpg) no-repeat center;
+    background-size:  cover;
+}
+.book form{
+    max-width: 60rem;
+    margin: 0 auto 2rem auto;
+    border-radius: var(--border-radius);
+    padding: 3rem;
+    border: var(--border);
+}
+.book form .box{
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+    color: var(--main-color);
+    border: var(--border);
+    margin: 0.6rem 0;
+} 
+.book form .box:focus{
+    border: var(--border-hover);
+}
+.book form textarea{
+    height: 14rem;
+    resize: none;
+}
 
 
 
