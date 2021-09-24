@@ -409,6 +409,8 @@ section{
         margin-top: -6rem;
     }
 }
+
+
 @media (max-width:450px) {
     html{
         font-size: 80%;
@@ -420,5 +422,15 @@ section{
     .home .row .image img{
         height: auto;
         width: 100%;
+    }
+    .review .review-slider .box .fa-quote-left ,
+    .review .review-slider .box .fa-quote-right{
+        font-size: 2.4rem;
+    }
+    .review .review-slider .box:hover .fa-quote-left{
+        top: -2rem;
+    }
+    .review .review-slider .box:hover .fa-quote-right{
+        bottom: -2rem;
     }
 }
