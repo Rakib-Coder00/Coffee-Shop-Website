@@ -23,7 +23,7 @@ images.forEach((img) =>{
 
 // swiper sliders  JS starts 
 var swiper = new Swiper(".review-slider", {
-    spaceBetween: 30,
+    spaceBetween: 18,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -33,13 +33,13 @@ var swiper = new Swiper(".review-slider", {
         disableOnInteraction: false,
     },
     breakpoints: {
-        0: {
-          slidesPerView: 0,
+        0 : {
+          slidesPerView: 1,
         },
         768: {
           slidesPerView: 2,
         },
     },
     loop : true,
-    grabCursor:true,
+    grabCursor : true,
   });
