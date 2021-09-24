@@ -19,3 +19,27 @@ images.forEach((img) =>{
         mainImg.src = src
     })
 })
+
+
+// swiper sliders  JS starts 
+var swiper = new Swiper(".review-slider", {
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        0: {
+          slidesPerView: 0,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+    },
+    loop : true,
+    grabCursor:true,
+  });
